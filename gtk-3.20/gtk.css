@@ -1,29 +1,16 @@
+/* TODO: make import more robust */
+@import '../../../.config/FlatColor-16/colors.css';
+
 /* Default color scheme */
-@define-color color0 #131971;
-@define-color color1 #9E9BDE;
-@define-color color2 #8F91D6;
-@define-color color3 #AEB0EA;
-@define-color color4 #5E6EDD;
-@define-color color5 #8579C5;
-@define-color color6 #7A84DF;
-@define-color color7 #d8cadf;
-@define-color color8 #19229c;
-@define-color color9 #b7b1ff;
-@define-color color10 #a2a6ff;
-@define-color color11 #c0c4ff;
-@define-color color12 #657fff;
-@define-color color13 #9e88ff;
-@define-color color14 #8899ff;
-@define-color color15 #fff2ff;
-@define-color selected_bg_color #7e6ccb;
-@define-color bg_color mix(@color0, @color15, 0.12);
-@define-color tooltip_bg_color mix(@color0, @color15, 0.04);
-@define-color base_color mix(@color0, @color15, 0);
-@define-color fg_color @color15;
-@define-color text_color @color15;
+@define-color bg_color @base00;
+@define-color fg_color @base05;
+@define-color base_color @base01;
+@define-color selected_bg_color @base02;
+@define-color selected_fg_color @base05;
+@define-color tooltip_bg_color @base00;
+@define-color tooltip_fg_color @base05;
+@define-color text_color @base05;
 @define-color text_color_disabled mix(@text_color, @base_color, 0.4);
-@define-color selected_fg_color @color15;
-@define-color tooltip_fg_color @color15;
 
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
@@ -38,26 +25,27 @@
 /* shadow effects */
 @define-color shadow alpha(@theme_fg_color, 0.1);
 
+/* TODO: find examples */
 /* misc colors used by gtk+ */
 @define-color info_fg_color @text_color;
 @define-color info_bg_color @bg_color;
 @define-color warning_fg_color @text_color;
-@define-color warning_bg_color @bg_color;
+@define-color warning_bg_color mix(@bg_color, @base09, 0.4);
 @define-color question_fg_color @text_color;
 @define-color question_bg_color @theme_selected_bg_color;
 @define-color error_fg_color @text_color;
-@define-color error_bg_color #f52400;
+@define-color error_bg_color mix(@bg_color, @base08, 0.4);
 @define-color link_color mix (@theme_selected_bg_color, black, 0.15);
-@define-color success_color #53a93f;
-@define-color warning_color #f57900;
-@define-color error_color #f52400;
+@define-color success_color @base08;
+@define-color warning_color @base09;
+@define-color error_color @base0A;
 
 /* widget colors*/
 @define-color border_color shade(@theme_selected_bg_color, 0.2);
 @define-color button_normal_color shade(@theme_bg_color, 1.20);
 @define-color button_info_color @theme_selected_bg_color;
 @define-color button_default_active_color @theme_selected_bg_color;
-@define-color entry_border_color shade(@theme_base_color, 0.9);
+@define-color entry_border_color shade(@theme_base_color, 1.9);
 @define-color frame_border_bottom_color shade(@bg_color, 0.8);
 @define-color sel_color shade(@theme_selected_bg_color, 0.857);
 @define-color switch_bg_color shade(@bg_color, 0.8);
@@ -68,10 +56,11 @@
 @define-color scrollbar_slider_prelight mix(@scrollbar_trough, @theme_fg_color, 0.5);
 
 
+/* TODO: find example */
 /* osd */
-@define-color osd_separator #49525B;
-@define-color osd_fg #ABB4BD;
-@define-color osd_bg #434A54;
+@define-color osd_separator @base03;
+@define-color osd_fg @base04;
+@define-color osd_bg @base02;
 
 /* window manager colors */
 @define-color wm_bg @theme_bg_color;

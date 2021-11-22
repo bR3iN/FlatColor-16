@@ -47,9 +47,9 @@ button.toggle:checked:hover {
 }
 
 button:disabled {
-    background-color: mix(@color8, @color0, 0.40);
+    background-color: @base_color;
     background-image: none;
-    color: mix(@text_color, @color0, 0.40);
+    color: @text_color_disabled;
 }
 
 button:active:disabled {}

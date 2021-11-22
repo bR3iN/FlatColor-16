@@ -191,13 +191,13 @@ GtkFileChooser {
   GtkFileChooser .pane-separator, GtkFileChooser .pane-separator:hover {
     border-width: 0 0px 0 0;
     border-style: solid;
-    border-color: @theme_bg_color;
-    background-color: #f0f0f0;
-    color: #d8d8d8; }
+    border-color: shade(@theme_bg_color, 1.2);
+    background-color: @theme_bg_color;
+    color: @theme_fg_color; }
   GtkFileChooser .dialog-action-box {
     border-width: 1px 0 0;
     border-style: solid;
-    border-color: #202020; }
+    border-color: shade(@theme_bg_color, 1.2); }
   GtkFileChooser .sidebar.list,
   .sidebar.list .button{
     background-color: @theme_bg_color;
