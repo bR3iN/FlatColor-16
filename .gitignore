@@ -1,1 +1,4 @@
 gtk-2.0/gtkrc
+.FlatColor-16.repo
+.flatpak-builder
+build

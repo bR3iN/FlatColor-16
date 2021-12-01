@@ -1,5 +1,4 @@
-/* TODO: make import more robust */
-@import '../../../.config/FlatColor-16/colors.css';
+@import '../colors.css';
 
 /* Default color scheme */
 @define-color bg_color @base00;

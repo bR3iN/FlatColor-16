@@ -3,8 +3,7 @@ set -e
 set -u
 
 # parse ~/.config/FlatColor-16/colors.css and extract colors
-LINES="$(cat ~/.config/FlatColor-16/colors.css \
-    | sed -n 's/@define-color \(base[0-9]\{2\}\) \(#[0-9A-Fa-f]\{6\}\);/\1 \2/p')"
+LINES="$(cat colors.css | sed -n 's/@define-color \(base[0-9]\{2\}\) \(#[0-9A-Fa-f]\{6\}\);/\1 \2/p')"
 
 declare -A colors
 while read -r line; do
@@ -46,5 +45,3 @@ cat <(echo "$GTKRC_HEADER") \
     <(echo) \
     gtk-2.0/gtkrc.template \
     > gtk-2.0/gtkrc
-
-chmod -w gtk-2.0/gtkrc
