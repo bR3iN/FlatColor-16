@@ -1,0 +1,27 @@
+app-id: org.gtk.Gtk3theme.FlatColor-16
+branch: "3.22"
+runtime: org.freedesktop.Platform
+runtime-version: "21.08"
+sdk: org.freedesktop.Sdk
+build-extension: true
+appstream-compose: false
+separate-locales: false
+modules: 
+  - name: gtk3-theme
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /usr/share/runtime/share/themes/FlatColor-16
+      - cp -a gtk-3.0/* colors.css /usr/share/runtime/share/themes/FlatColor-16/gtk-3.0/
+      - sed -i 's#../colors.css#colors.css#' /usr/share/runtime/share/themes/FlatColor-16/gtk-3.0/gtk.css
+    sources:
+    - type: dir
+      path: .
+  - name: appdata
+    buildsystem: simple
+    build-commands:
+      - mkdir -p ${FLATPAK_DEST}/share/appdata
+      - cp org.gtk.Gtk3theme.FlatColor-16.appdata.xml ${FLATPAK_DEST}/share/appdata
+      - appstream-compose --basename=org.gtk.Gtk3theme.FlatColor-16 --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.FlatColor-16
+    sources:
+      - type: file
+        path: org.gtk.Gtk3theme.FlatColor-16.appdata.xml

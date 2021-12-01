@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="runtime">
+    <id>org.gtk.Gtk3theme.FlatColor-16</id>
+    <metadata_license>smth</metadata_license>
+    <name>FlatColor-16 Gtk theme</name>
+</component>
